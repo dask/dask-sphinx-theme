@@ -1,0 +1,19 @@
+{% extends "sphinx_rtd_theme/layout.html" %}
+
+{% set css_files = css_files + ["_static/css/explore.css"] %}
+
+{% block extrabody %}
+
+<nav id="explore-links">
+<p class="caption">
+  Explore
+</p>
+<a href="https://dask-distributed.readthedocs.io">
+  dask.distributed
+</a>
+<a href="https://dask-stories.readthedocs.io">
+  dask-stories
+</a>
+</nav>
+
+{% endblock %}
