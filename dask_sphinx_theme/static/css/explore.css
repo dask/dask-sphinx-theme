@@ -56,6 +56,8 @@
 
 #explore-links ul li a {
   padding-left: 1rem;
+  display: block;
+  height: 100%;
 }
 
 #explore-links ul ul { /* lists within lists... */
