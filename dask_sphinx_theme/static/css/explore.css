@@ -31,7 +31,6 @@
 }
 
 #explore-links a {
-  flex: 1;
   color: #ECB172;
 }
 
@@ -43,4 +42,31 @@
   #explore-links {
     display: none;
   }
+}
+
+#explore-links ul { /* all lists... */
+  display: flex;
+  flex: 1;
+  color: #ECB172;
+}
+
+#explore-links li { /* all list items... */
+  flex: 1;
+  position: relative; /* set the origin for child boxes to be positioned from */
+}
+
+#explore-links ul ul { /* lists within lists... */
+  left: 0; /* align them to the left of the parent list item  - necessary for some older browsers */
+  top: 100%; /* align them to the bottom of the parent list item - again only necessary for older browsers */
+  display: none; /* hide 'em */
+  color: #ECB172;
+  background-color: #101010;
+}
+
+#explore-links li:hover ul { /* when list items are hovered over, do this to lists contained within them... */
+  display: block; /* show 'em */
+}
+
+#explore-links ul li:hover { /* when list items are hovered over, do this to lists contained within them... */
+  background-color: #343131;
 }
