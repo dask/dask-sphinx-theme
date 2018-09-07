@@ -1,0 +1,59 @@
+{% extends "sphinx_rtd_theme/layout.html" %}
+
+{% set css_files = css_files + ["_static/css/explore.css"] %}
+
+{% block extrabody %}
+
+<nav id="explore-links">
+  <img class="caption" src="_static/images/dask-horizontal-white.svg"/>
+
+  <ul>
+    <li>
+      <a>Get Started</a>
+      <ul>
+        <li><a href="https://dask.pydata.org/en/latest/install.html"> Install </a></li>
+        <li><a href="https://mybinder.org/v2/gh/dask/dask-examples/master"> Examples </a></li>
+        <li><a href="https://github.com/dask/dask-tutorial"> Tutorial </a></li>
+        <li><a href="https://dask.pydata.org/en/latest/why.html"> Why Dask? </a></li>
+        <li><a href="https:/dask-stories.readthedocs.io/en/latest"> Use Cases </a></li>
+        <li><a href="https://www.youtube.com/watch?v=RA_2qdipVng&list=PLRtz5iA93T4PQvWuoMnIyEIz1fXiJ5Pri"> Talks </a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="">Algorithms</a>
+      <ul>
+        <li><a href="https://dask.pydata.org/en/latest/array.html">Arrays</a></li>
+        <li><a href="https://dask.pydata.org/en/latest/dataframe.html">Dataframes</a></li>
+        <li><a href="https://dask.pydata.org/en/latest/bag.html">Bags</a></li>
+        <li><a href="https://dask.pydata.org/en/latest/delayed.html">Delayed (custom)</a></li>
+        <li><a href="https://dask.pydata.org/en/latest/futures.html">Futures (real-time)</a></li>
+        <li><a href="https://dask-ml.readthedocs.io/en/latest/array.html">Machine Learning</a></li>
+        <li><a href="https://dask.pydata.org/en/latest/array.html">XArray</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="https://dask.pydata.org/en/latest/setup.html">Deploy</a>
+      <ul>
+        <li><a href="https://dask-yarn.readthedocs.io/en/latest/"> Hadoop / Yarn </a></li>
+        <li><a href="https://dask.pydata.org/en/latest/setup/kubernetes-helm.html"> Helm </a></li>
+        <li><a href="https://dask.pydata.org/en/latest/setup/hpc.html"> HPC </a></li>
+        <li><a href="https://dask-kubernetes.readthedocs.io/en/latest/"> Kubernetes </a></li>
+        <li><a href="https://dask.pydata.org/en/latest/setup/single-machine.html"> Local </a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a>Developer Docs</a>
+      <ul>
+        <li><a href="https://distributed.readthedocs.io/en/latest">Scheduling</a></li>
+        <li><a href="https://dask.pydata.org/en/latest/understanding-performance.html">Diagnostics</a></li>
+        <li><a href="https://github.com/dask">Diagnostics</a></li>
+      </ul>
+    </li>
+  </ul>
+
+</nav>
+
+{% endblock %}
