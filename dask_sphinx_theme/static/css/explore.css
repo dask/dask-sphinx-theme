@@ -22,12 +22,6 @@
 
 #explore-links .caption {
   flex: 0;
-  font-weight: bold;
-  text-transform: uppercase;
-  white-space: nowrap;
-  line-height: 50px;
-  padding: 0 1.618em;
-  color: #D67548;
 }
 
 #explore-links a {
@@ -48,11 +42,20 @@
   display: flex;
   flex: 1;
   color: #ECB172;
+  transition: .3s;
+
 }
 
 #explore-links li { /* all list items... */
   flex: 1;
   position: relative; /* set the origin for child boxes to be positioned from */
+  transition: .3s;
+  text-align: left;
+  max-width: 12rem;
+}
+
+#explore-links ul li a {
+  padding-left: 1rem;
 }
 
 #explore-links ul ul { /* lists within lists... */

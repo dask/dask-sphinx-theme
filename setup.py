@@ -16,6 +16,7 @@ setup(name='dask_sphinx_theme',
           'theme.conf',
           '*.html',
           'static/css/*.css',
+          'static/images/*.svg',
           'static/js/*.js',
           'static/font/*.*'
       ]},
