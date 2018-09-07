@@ -23,6 +23,8 @@
 
 #explore-links .caption {
   flex: 0;
+  width: 300px;
+  max-height: 100%;
 }
 
 #explore-links a {
