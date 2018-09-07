@@ -16,7 +16,7 @@
   height: 50px;
   line-height: 50px;
   text-align: center;
-  background-color: #101010;
+  background-color: black;
   color: #ECB172;
   display: flex;
 }
@@ -66,7 +66,7 @@
   top: 100%; /* align them to the bottom of the parent list item - again only necessary for older browsers */
   display: none; /* hide 'em */
   color: #ECB172;
-  background-color: #101010;
+  background-color: black;
 }
 
 #explore-links li:hover ul { /* when list items are hovered over, do this to lists contained within them... */
