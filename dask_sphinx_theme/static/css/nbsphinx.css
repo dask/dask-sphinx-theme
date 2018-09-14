@@ -1,0 +1,8 @@
+/* Turn off In/Out prompts */
+div.nbinput div.prompt, div.nboutput div.prompt {
+  display: none;
+}
+
+.rst-content pre.literal-block div[class^='highlight'], .rst-content div[class^='highlight'] div[class^='highlight'] {
+  background: none;
+}
