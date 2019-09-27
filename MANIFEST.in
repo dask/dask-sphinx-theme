@@ -2,6 +2,7 @@ recursive-include dask_sphinx_theme *.py
 recursive-include dask_sphinx_theme *.html
 recursive-include dask_sphinx_theme *.css
 recursive-include dask_sphinx_theme *.svg
+recursive-include dask_sphinx_theme *.ico
 recursive-include dask_sphinx_theme *.conf
 
 include setup.py
