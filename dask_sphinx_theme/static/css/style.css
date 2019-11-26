@@ -1,5 +1,11 @@
 @import url("theme.css");
 
+html {
+  /* Offset href links for header.
+   * See: https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/ */
+  scroll-padding-top: 50px
+}
+
 .rst-content h1,h2,h3,h4,h5{
   font-family: 'Garamond', 'Georgia', serif;
   font-weight: normal;
