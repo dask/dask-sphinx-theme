@@ -30,7 +30,6 @@ jobs:
         python -m pip install wheel twine
         python setup.py sdist bdist_wheel
     
-    steps:
     - name: Publish dask-sphinx-theme
       if: success() && github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
       uses: pypa/gh-action-pypi-publish@master
