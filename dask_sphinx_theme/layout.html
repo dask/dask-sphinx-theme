@@ -8,6 +8,8 @@
 {%- endif %}
 {%- set lang_attr = 'en' if language == None else (language | replace('_', '-')) %}
 
+{# XXX: Should revert back to theme inhritence if readthedocs/sphinx_rtd_theme#853 is ever merged #}
+
 {% set css_files = css_files + ["_static/css/explore.css"] %}
 {% set css_files = css_files + ["_static/css/nbsphinx.css"] %}
 
