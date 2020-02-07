@@ -1,7 +1,7 @@
 name: Lighthouse
 on: [push, pull_request]
 jobs:
-  static-dist-dir:
+  CI:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
