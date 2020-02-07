@@ -3,7 +3,9 @@
     "assert": {
       "assertions": {
         "categories:performance": ["warn", { "minScore": 0.9 }],
-        "categories:accessibility": ["warn", { "minScore": 1 }]
+        "categories:accessibility": ["warn", { "minScore": 1 }],
+        "uses-long-cache-ttl": "off",
+        "uses-http2": "off"
       }
     },
     "collect": {
