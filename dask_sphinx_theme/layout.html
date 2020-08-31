@@ -1,11 +1,6 @@
 {# TEMPLATE VAR SETTINGS #}
 {%- set url_root = pathto('', 1) %}
 {%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
-{%- if not embedded and docstitle %}
-  {%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
-{%- else %}
-  {%- set titlesuffix = "" %}
-{%- endif %}
 {%- set lang_attr = 'en' if language == None else (language | replace('_', '-')) %}
 
 {# XXX: Should revert back to theme inhritence if readthedocs/sphinx_rtd_theme#853 is ever merged #}
@@ -22,7 +17,7 @@
   {{ metatags }}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% block htmltitle %}
-  <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+  <title>{{ title|striptags|e }}</title>
   {% endblock %}
 
   {# FAVICON #}
