@@ -24,10 +24,30 @@
   {% if favicon %}
     <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
   {% endif %}
+
   {# CANONICAL URL #}
   {% if theme_canonical_url %}
     <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html"/>
   {% endif %}
+
+  {# SOCIAL GRAPH #}
+  <meta name="Description" content="{{ title|striptags|e }}">
+  <meta property="og:description" content="{{ title|striptags|e }}">
+  <meta name="twitter:description" content="{{ title|striptags|e }}" />
+  <meta property="og:title" content="{{ docstitle }} - {{ title|striptags|e }}">
+  <meta property="og:image" content="https://github.com/dask.png">
+  <meta property="og:image:secure_url" content="https://github.com/dask.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="380" />
+  <meta property="og:image:height" content="380" />
+  <meta property="og:url" content="{{ theme_canonical_url }}{{ pagename }}.html">
+  <meta property="og:site_name" content="{{ docstitle }}">
+
+  <meta name="twitter:site" content="https://dask.org" />
+  <meta name="twitter:creator" content="@dask_dev" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://github.com/dask.png" />
+  <meta name="twitter:image:alt" content="{{ docstitle }}">
 
   {# CSS #}
   <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
