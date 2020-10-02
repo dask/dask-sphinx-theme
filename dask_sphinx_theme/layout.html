@@ -2,6 +2,7 @@
 {%- set url_root = pathto('', 1) %}
 {%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
 {%- set lang_attr = 'en' if language == None else (language | replace('_', '-')) %}
+{%- set sphinx_writer = 'writer-html5' if html5_doctype else 'writer-html4' %}
 
 {# XXX: Should revert back to theme inhritence if readthedocs/sphinx_rtd_theme#853 is ever merged #}
 
@@ -11,7 +12,7 @@
 {% set script_files = script_files + ["_static/js/custom.js"] %}
 
 <!DOCTYPE html>
-<html lang="{{ lang_attr }}" >
+<html class="{{ sphinx_writer }}" lang="{{ lang_attr }}" >
 <head>
   <meta charset="utf-8">
   {{ metatags }}
