@@ -155,3 +155,7 @@ a {
 .has-children label i {
    color: var(--dask-light);
 }
+
+.sphinx-tabs {
+	max-width: 100%;
+}
