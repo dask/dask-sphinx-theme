@@ -97,7 +97,7 @@ main.bd-content {
 	right: 0;
 	left: 0;
 	z-index: 2100;
-	overflow-x: scroll;
+	overflow-x: hidden;
 	overflow-y: hidden;
 	padding: 0;
 }
@@ -141,4 +141,17 @@ a {
 #site-navigation div.navbar_extra_footer {
 	padding-bottom: 3em;
 	margin-bottom: 0;
+}
+
+
+.has-children label:hover {
+    background-color: #303030;
+}
+
+.has-children label:hover i {
+    color: var(--dask-light);
+}
+
+.has-children label i {
+   color: var(--dask-light);
 }
