@@ -1,6 +1,6 @@
 from os import path
 
-__version__ = '1.3.6'
+__version__ = "1.3.6"
 
 
 def get_html_theme_path():
@@ -8,6 +8,7 @@ def get_html_theme_path():
     cur_dir = path.abspath(path.dirname(path.dirname(__file__)))
     return cur_dir
 
+
 # See http://www.sphinx-doc.org/en/stable/theming.html#distribute-your-theme-as-a-python-package
 def setup(app):
-    app.add_html_theme('dask_sphinx_theme', path.abspath(path.dirname(__file__)))
+    app.add_html_theme("dask_sphinx_theme", path.abspath(path.dirname(__file__)))

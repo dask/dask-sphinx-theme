@@ -1,41 +1,44 @@
-{% extends "sphinx_book_theme/layout.html" %}
-
-{%- block content %}
+{% extends "sphinx_book_theme/layout.html" %} {%- block content %}
 
 <nav class="dask-nav container-fluid">
-    <ul>
-        <li class="logo">
-            <a href="https://docs.dask.org/">
-                <img class="caption" src="{{ pathto('_static/images/dask-horizontal-white.svg', 1) }}" />
-            </a>
-        </li>
+  <ul>
+    <li class="logo">
+      <a href="https://docs.dask.org/">
+        <img
+          class="caption"
+          src="{{ pathto('_static/images/dask-horizontal-white.svg', 1) }}"
+        />
+      </a>
+    </li>
 
-        <li>
-            <a href="https://docs.dask.org/">Dask</a>
-        </li>
+    <li>
+      <a href="https://docs.dask.org/">Dask</a>
+    </li>
 
-        <li>
-            <a href="https://distributed.dask.org/">Distributed</a>
-        </li>
+    <li>
+      <a href="https://distributed.dask.org/">Distributed</a>
+    </li>
 
-        <li>
-            <a href="https://ml.dask.org/">Dask ML</a>
-        </li>
+    <li>
+      <a href="https://ml.dask.org/">Dask ML</a>
+    </li>
 
-        <li>
-            <a href="https://examples.dask.org/">Examples</a>
-        </li>
+    <li>
+      <a href="https://examples.dask.org/">Examples</a>
+    </li>
 
-        <li>
-            <a href="https://dask--7984.org.readthedocs.build/en/7984/ecosystem.html">Ecosystem</a>
-        </li>
+    <li>
+      <a href="https://dask--7984.org.readthedocs.build/en/7984/ecosystem.html"
+        >Ecosystem</a
+      >
+    </li>
 
-        <li>
-            <a href="https://dask--7984.org.readthedocs.build/en/7984/support.html">Community</a>
-        </li>
-    </ul>
+    <li>
+      <a href="https://dask--7984.org.readthedocs.build/en/7984/support.html"
+        >Community</a
+      >
+    </li>
+  </ul>
 </nav>
 
-{{ super() }}
-
-{%- endblock %}
+{{ super() }} {%- endblock %}

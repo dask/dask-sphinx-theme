@@ -1,161 +1,179 @@
 @import "../sphinx-book-theme.css";
 
 :root {
-	--dask-dark: #D67548;
-	--dask-light: #ECB172;
+  --dask-dark: #d67548;
+  --dask-light: #ecb172;
 }
 
 code {
-	color: var(--dask-dark);
+  color: var(--dask-dark);
 }
 
 body {
-	background-image: url("../images/background.png");
-	background-repeat: repeat;
+  background-image: url("../images/background.png");
+  background-repeat: repeat;
 }
 
-.container, .container-lg, .container-md, .container-sm, .container-xl{
-	max-width: 1600px;
-	margin-left: inherit;
-	background-color: white;
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  max-width: 1600px;
+  margin-left: inherit;
+  background-color: white;
 }
 
 @media (min-width: 1600px) {
-	.container, .container-lg, .container-md, .container-sm, .container-xl{
-		max-width: 85%
-	}
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 85%;
+  }
 }
 
-
 .bd-sidebar {
-	/* max-width: 350px; */
+  /* max-width: 350px; */
 }
 
 .prev-next-bottom {
-	display: none;
+  display: none;
 }
 
-#site-navigation nav ul.nav li a, #site-navigation nav ul.nav ul li a {
-	color: #fff;
+#site-navigation nav ul.nav li a,
+#site-navigation nav ul.nav ul li a {
+  color: #fff;
 }
 
-#site-navigation h1, #site-navigation h2, #site-navigation h3, #site-navigation h4, #site-navigation h5, #site-navigation h6 {
-	color: white;
+#site-navigation h1,
+#site-navigation h2,
+#site-navigation h3,
+#site-navigation h4,
+#site-navigation h5,
+#site-navigation h6 {
+  color: white;
 }
 
 #site-navigation {
-   background: #1a1a1a;
-   margin-top: 4em;
+  background: #1a1a1a;
+  margin-top: 4em;
 }
 
 nav.bd-links p.caption {
-	color: var(--dask-dark);
+  color: var(--dask-dark);
 }
 
-#site-navigation nav ul.nav a:hover, #site-navigation nav ul.nav li.active > a, #site-navigation nav ul.nav li.active > a:hover {
-	color: #ECB172;
-   background: #303030;
+#site-navigation nav ul.nav a:hover,
+#site-navigation nav ul.nav li.active > a,
+#site-navigation nav ul.nav li.active > a:hover {
+  color: #ecb172;
+  background: #303030;
 }
 
-#site-navigation nav ul.nav li a{
-   padding-left: 2%;
+#site-navigation nav ul.nav li a {
+  padding-left: 2%;
 }
 
-#site-navigation nav ul.nav li a, #site-navigation nav ul.nav ul li a {
-	color: var(--dask-light);
+#site-navigation nav ul.nav li a,
+#site-navigation nav ul.nav ul li a {
+  color: var(--dask-light);
 }
 
 #site-navigation div.navbar_extra_footer {
-	color: #FFFFFF;
+  color: #fff;
 }
 
 #site-navigation h1.site-logo {
-	color: white;
+  color: white;
 }
 
-.topbar, .topbar-contents, .topbar-main {
-    height: 3em;
+.topbar,
+.topbar-contents,
+.topbar-main {
+  height: 3em;
 }
 
 .fixed-top {
-    top: 4em;
+  top: 4em;
 }
 
 div.navbar-brand-box {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 main.bd-content {
-	padding-top: 6em !important;
+  padding-top: 6em !important;
 }
 
 .dask-nav {
-	background-color: #1a1a1a;
-	height: 4em;
-	display: block;
-	position: fixed;
-	right: 0;
-	left: 0;
-	z-index: 2100;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	padding: 0;
+  background-color: #1a1a1a;
+  height: 4em;
+  display: block;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 2100;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0;
 }
 
 .dask-nav ul {
-	padding: 0;
-	margin-bottom: 0;
-	white-space: nowrap;
+  padding: 0;
+  margin-bottom: 0;
+  white-space: nowrap;
 }
 
 .dask-nav ul > li {
-    display: inline-block;
-    position: relative;
-    transition: .3s;
-    text-align: left;
-	padding: 0.5em 2rem 0.5em 2rem;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+  text-align: left;
+  padding: 0.5em 2rem 0.5em 2rem;
 }
 
 .dask-nav .logo {
-	width: 275px;
-	text-align: center;
+  width: 275px;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
-	.dask-nav .logo {
-		width: 100%;
-	}
-	#site-navigation.collapse.show{
-		margin-top: 7em;
-	}
+  .dask-nav .logo {
+    width: 100%;
+  }
+
+  #site-navigation.collapse.show {
+    margin-top: 7em;
+  }
 }
 
 .dask-nav img {
-	height: 3em;
+  height: 3em;
 }
 
 a {
-	color: var(--dask-light);
+  color: var(--dask-light);
 }
 
 #site-navigation div.navbar_extra_footer {
-	padding-bottom: 3em;
-	margin-bottom: 0;
+  padding-bottom: 3em;
+  margin-bottom: 0;
 }
 
-
 .has-children label:hover {
-    background-color: #303030;
+  background-color: #303030;
 }
 
 .has-children label:hover i {
-    color: var(--dask-light);
+  color: var(--dask-light);
 }
 
 .has-children label i {
-   color: var(--dask-light);
+  color: var(--dask-light);
 }
 
 .sphinx-tabs {
-	max-width: 100%;
+  max-width: 100%;
 }
