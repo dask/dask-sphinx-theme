@@ -18,7 +18,8 @@ installation.
 Releasing
 ---------
 
-This project is configured to automatically push a new release to PyPI whenever
+This project `uses GitHub Actions <https://github.com/jrbourbeau/dask-sphinx-theme/blob/fd807bb22c5c6734f38e73a36e4c3a67bbbd316f/.github/workflows/publish-pypi.yml>`_
+to automatically push a new release to PyPI whenever
 a git tag is pushed. For example, to release a new ``x.y.z`` version of
 ``dask-sphinx-theme``, checkout the commit you would like to release,
 add a git tag, and push the tag to the ``main`` branch of the
