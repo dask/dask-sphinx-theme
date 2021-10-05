@@ -15,6 +15,17 @@ line in your conf.py file
 And by including ``dask_sphinx_theme`` as a requirement in your documentation
 installation.
 
-History
--------
+Releasing
+---------
 
+This project is configured to automatically push a new release to PyPI whenever
+a git tag is pushed. For example, to release a new ``x.y.z`` version of
+``dask-sphinx-theme``, checkout the commit you would like to release,
+add a git tag, and push the tag to the ``main`` branch of the
+``dask/dask-sphinx-theme`` repository:
+
+.. code-block::
+
+   $ git checkout <commit-hash>
+   $ git tag -a x.y.z -m 'Version x.y.z'
+   $ git push upstream main --tags
