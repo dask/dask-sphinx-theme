@@ -2,7 +2,7 @@ Dask Sphinx Theme
 =================
 
 This is the official Sphinx theme for Dask documentation.  It extends the
-``sphinx_rtd_theme`` project, but adds custom styling and a navigation bar to
+``sphinx-book-theme`` project, but adds custom styling and a navigation bar to
 additional Dask subprojects.
 
 When creating a Dask subproject you can include this theme by changing this
