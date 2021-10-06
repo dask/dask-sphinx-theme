@@ -30,3 +30,7 @@ add a git tag, and push the tag to the ``main`` branch of the
    $ git checkout <commit-hash>
    $ git tag -a x.y.z -m 'Version x.y.z'
    $ git push upstream main --tags
+
+After a new release is published on PyPI, a pull request to the ``dask-sphinx-theme``
+`conda-forge feedstock <https://github.com/conda-forge/dask-sphinx-theme-feedstock>`_
+for the new ``x.y.z`` release will automatically be opened by conda-forge bots.
