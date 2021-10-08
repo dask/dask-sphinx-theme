@@ -5,6 +5,12 @@
   --dask-light: #ecb172;
 }
 
+html {
+  /* Offset href links for header.
+	 * See: https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/ */
+  scroll-padding-top: 4em;
+}
+
 code {
   color: var(--dask-dark);
 }
