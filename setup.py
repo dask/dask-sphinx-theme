@@ -22,6 +22,7 @@ setup(
             "static/images/*.ico",
             "static/js/*.js",
             "static/font/*.*",
+            "ext/*",
         ]
     },
     include_package_data=True,
