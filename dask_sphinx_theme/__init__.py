@@ -1,6 +1,7 @@
 from os import path
+from . import _version
 
-__version__ = "2.0.3"
+__version__ = _version.get_versions()["version"]
 
 
 def get_html_theme_path():
@@ -12,3 +13,8 @@ def get_html_theme_path():
 # See http://www.sphinx-doc.org/en/stable/theming.html#distribute-your-theme-as-a-python-package
 def setup(app):
     app.add_html_theme("dask_sphinx_theme", path.abspath(path.dirname(__file__)))
+
+
+from . import _version
+
+__version__ = _version.get_versions()["version"]

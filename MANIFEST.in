@@ -11,3 +11,5 @@ include requirements.txt
 include README.rst
 include LICENSE.txt
 include MANIFEST.in
+include versioneer.py
+include dask_sphinx_theme/_version.py
