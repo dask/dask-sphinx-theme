@@ -9,11 +9,6 @@ code {
   color: var(--dask-dark);
 }
 
-body {
-  background-image: url("../images/background.png");
-  background-repeat: repeat;
-}
-
 .container,
 .container-lg,
 .container-md,
