@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 
 from setuptools import setup
-import dask_sphinx_theme
+import versioneer
 
 setup(
     name="dask_sphinx_theme",
-    version=dask_sphinx_theme.__version__,
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     url="https://github.com/dask/dask-sphinx-theme/",
     license="BSD",
     author="Dask Developers",
