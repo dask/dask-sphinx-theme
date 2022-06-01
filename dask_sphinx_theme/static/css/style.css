@@ -1,43 +1,71 @@
 @import "../sphinx-book-theme.css";
 
 :root {
+
+/* Main colors */
   --yellow: #ffc11e;
   --white: #fff;
   --blue: #1f5aff;
-  --dark-blue: #183d72;
+  --dark-blue: #183D72;
+  --light-grey: #f6f6f6;
   --grey: #33363d;
   --dark-grey: #262326;
   --black: #080815;
-  --pink: #ef1561;
+  --green: #17955C;
+  --salmon: #FC6E6B;
+  --red: #EF1161;
+  --purple: #F61FFF;
+  --pst-color-text-base: var(--black);
   --pst-color-navbar-link: var(--yellow);
-  --pst-color-link: var(--blue);
-  --pst-font-family-base: Inter;
-  --pst-font-family-heading: Inter;
-  --pst-font-family-monospace: Inconsolata;
+  --pst-color-link: var(--black);
+  --pst-color-link-hover: var(--yellow);
+  --pst-color-inline-code: var(--salmon);
+
+  /* Font Family */
+  --pst-font-family-base-system: Inter-Regular;
+  --pst-font-family-monospace-system: Inconsolata-Regular;
+  --pst-font-family-base: var(--pst-font-family-base-system);
+  --pst-font-family-heading: var(--pst-font-family-base);
+  --pst-font-family-monospace: var(--pst-font-family-monospace-system);
 }
 
 @font-face {
-  font-family: Inter;
+  font-family: Inter-Regular;
   font-weight: 400;
-  src: local("Inter"), url(../fonts/Inter-Regular.ttf) format("truetype");
+  src: local("Inter-Regular"), url(../fonts/Inter-Regular.ttf) format("TrueType");
 }
 
 @font-face {
-  font-family: Inter-Medium;
-  font-weight: 400;
-  src: local("Inter-Medium"), url(../fonts/Inter-Medium.ttf) format("truetype");
+    font-family: Inter-Bold;
+    font-weight: bold;
+    src: local("Inter-Bold"), url(../fonts/Inter-Bold.ttf) format("TrueType");
 }
 
 @font-face {
-  font-family: Inconsolata;
+    font-family: Inter-SemiBold;
+    font-weight: bold;
+    src: local("Inter-SemiBold"), url(../fonts/Inter-SemiBold.ttf) format("TrueType");
+}
+
+@font-face {
+  font-family: Inconsolata-Regular;
   font-weight: 400;
-  src: local("Inconsolata"),
-    url(../fonts/Inconsolata-Regular.ttf) format("truetype");
+  src: local("Inconsolata-Regular"),
+    url(../fonts/Inconsolata-Regular.ttf) format("TrueType");
 }
 
 code {
-  color: var(--pink);
+  color: var(--salmon);
   font-size: 16px !important;
+}
+
+body {
+    padding-top: calc(var(--pst-header-height) + 20px);
+    background-color: #fff;
+    font-family: Inter-Regular;
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--black);
 }
 
 *,
@@ -46,12 +74,8 @@ code {
   box-sizing: border-box;
 }
 
-main.bd-content #main-content a {
-  color: var(--pst-color-link);
-}
-
 body {
-  background-image: url("../images/background.png");
+  background-image: url("../images/background-grid.svg");
   background-repeat: repeat;
 }
 
@@ -83,46 +107,76 @@ body {
   display: none;
 }
 
-#site-navigation nav ul.nav li a,
-#site-navigation nav ul.nav ul li a {
-  color: white;
+/* reference links */
+
+main.bd-content #main-content a {
+    color: var(--pst-color-link);
+    text-decoration: underline;
+    text-decoration-color: var(--yellow);
+    text-underline-offset: 3px;
 }
 
-#site-navigation h1,
-#site-navigation h2,
-#site-navigation h3,
-#site-navigation h4,
-#site-navigation h5,
-#site-navigation h6 {
-  color: white;
+main.bd-content #main-content a:hover {
+    color: var(--pst-color-link-hover);
 }
+
+/* navigation pane - left sidebar */
 
 #site-navigation {
-  background: var(--black);
-  margin-top: 4em;
-}
-
-nav.bd-links p.caption {
-  color: var(--yellow);
-  font-family: Inter-Medium;
-}
-
-#site-navigation nav ul.nav a:hover,
-#site-navigation nav ul.nav li.active > a,
-#site-navigation nav ul.nav li.active > a:hover {
-  color: var(--yellow);
+    background: var(--light-grey);
+    background-image: url("../images/background-grid.svg");
+    margin-top: 4em;
 }
 
 #site-navigation nav ul.nav li a {
-  padding-left: 2%;
+    padding-left: 2%;
+    color: var(--black);
+    text-decoration: none;
+}
+
+#site-navigation nav ul.nav ul li a {
+    color: var(--black);
+}
+
+#site-navigation nav ul.nav a:hover {
+    color: var(--black);
+    font-weight: 700;
+    border-left: 2px solid var(--black)
+}
+
+/* #site-navigation nav ul.nav li a:active {
+    border-left: 2px solid var(--yellow)
+} */
+
+#site-navigation nav ul.nav li.active>a {
+    border-left: 2px solid var(--yellow)
+}
+
+#site-navigation nav.bd-links p.caption {
+    font-size: var(--pst-sidebar-caption-font-size);
+    text-transform: uppercase;
+    font-family: Inter-SemiBold;
+    position: relative;
+    margin-top: 1.25em;
+    margin-bottom: 0.5em;
+    color: var(--black);
 }
 
 #site-navigation div.navbar_extra_footer {
-  color: white;
+    color: var(--black);
+    padding-bottom: 3em;
+    margin-bottom: 0;
 }
 
-#site-navigation h1.site-logo {
-  color: white;
+/* table on contents (right sidebar) */
+.bd-toc .toc-entry a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.bd-toc nav li.active>a.active {
+    font-family: Inter-SemiBold;
+    border-left: 2px solid var(--yellow)
 }
 
 .topbar,
@@ -143,6 +197,8 @@ main.bd-content {
   padding-top: 6em !important;
 }
 
+/* top bar */
+
 .dask-nav {
   background-color: var(--black);
   height: 4em;
@@ -157,6 +213,7 @@ main.bd-content {
 }
 
 .dask-nav ul {
+  background-color: var(--dark-grey);
   padding: 0;
   margin-bottom: 0;
   white-space: nowrap;
@@ -175,7 +232,9 @@ main.bd-content {
 }
 
 .dask-nav ul > li > a:hover {
-  color: var(--yellow);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--yellow);
 }
 
 .dask-nav .logo {
@@ -218,34 +277,6 @@ ul.current.nav.bd-sidenav
   font-weight: inherit;
 }
 
-.bd-toc nav a:hover,
-.bd-toc nav li.active > a.active {
-  color: var(--dark-blue);
-  font-family: inherit;
-  border-left: 2px solid var(--dark-blue);
-}
-
-.bd-toc .toc-entry a {
-  color: var(--grey);
-}
-
-#site-navigation div.navbar_extra_footer {
-  padding-bottom: 3em;
-  margin-bottom: 0;
-}
-
-.has-children label:hover {
-  background-color: #303030;
-}
-
-.has-children label:hover i {
-  color: var(--yellow);
-}
-
-.has-children label i {
-  color: var(--yellow);
-}
-
 .sphinx-tabs {
   max-width: 100%;
 }
@@ -254,3 +285,27 @@ ul.current.nav.bd-sidenav
 .classifier::before {
   content: ": ";
 }
+
+footer {
+    bottom: 0;
+    left: 0;
+    width: 76%;
+    height: 50px;
+    background-color: var(--grey);
+    color: var(--white);
+}
+
+/* icons */
+
+/* .fa-download:before {
+    content: url('../images/icon-download.svg');
+}
+
+.fa-expand:before {
+    content: url('../images/icon-expand.svg');
+}
+
+.fa-bars:before {
+    content: url('../images/icon-menu.svg');
+} */
+
