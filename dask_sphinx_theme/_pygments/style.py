@@ -53,7 +53,7 @@ class DaskStyle(Style):
         Name.Attribute: salmon,  # class: 'na' - to be revised
         Name.Builtin: green,  # class: 'nb'
         Name.Builtin.Pseudo: green,  # class: 'bp'
-        Name.Class: "bold {blue}",  # class: 'nc' - to be revised
+        Name.Class: f"bold {blue}",  # class: 'nc' - to be revised
         Name.Constant: black,  # class: 'no' - to be revised
         Name.Decorator: purple,  # class: 'nd' - to be revised
         Name.Entity: salmon,  # class: 'ni'
@@ -92,7 +92,7 @@ class DaskStyle(Style):
         String.Symbol: red,  # class: 'ss'
         Generic: black,  # class: 'g'
         Generic.Deleted: salmon,  # class: 'gd'
-        Generic.Emph: "italic black",  # class: 'ge'
+        Generic.Emph: f"italic {black}",  # class: 'ge'
         Generic.Error: "#ef2929",  # class: 'gr'
         Generic.Heading: f"bold {green}",  # class: 'gh'
         Generic.Inserted: green,  # class: 'gi'
