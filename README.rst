@@ -25,11 +25,9 @@ a git tag is pushed. For example, to release a new ``x.y.z`` version of
 add a git tag, and push the tag to the ``main`` branch of the
 ``dask/dask-sphinx-theme`` repository:
 
-Bump the ``__version__`` in ``dask_sphinx_theme/__init__.py``.
-
 .. code-block::
 
-   $ git checkout <commit-hash>
+   $ git checkout main
    $ git tag -a x.y.z -m 'Version x.y.z'
    $ git push upstream main --tags
 
