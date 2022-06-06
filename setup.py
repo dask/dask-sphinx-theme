@@ -22,7 +22,7 @@ setup(
             "static/images/*.svg",
             "static/images/*.ico",
             "static/js/*.js",
-            "static/font/*.*",
+            "static/fonts/*.*",
             "ext/*",
         ]
     },
