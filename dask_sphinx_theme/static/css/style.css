@@ -293,12 +293,6 @@ ul.current.nav.bd-sidenav
   content: ": ";
 }
 
-footer {
-  background-color: var(--grey);
-  color: var(--white);
-  width: 76%;
-}
-
 /* icons */
 
 /* .fa-download:before {
