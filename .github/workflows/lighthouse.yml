@@ -22,7 +22,7 @@ jobs:
           make html
 
       - name: Run Lighthouse against example docs build
-        uses: treosh/lighthouse-ci-action@v2
+        uses: treosh/lighthouse-ci-action@v9
         with:
           configPath: "./lighthouserc.json"
           temporaryPublicStorage: true

@@ -10,7 +10,6 @@ def get_remote_yaml(url):
 
 
 class DaskConfigDirective(Directive):
-
     option_spec = {
         "location": directives.unchanged,
         "schema": directives.uri,
@@ -64,7 +63,6 @@ def dask_config_to_html(key, value, schema, prefix=""):
         )
 
     else:
-
         try:
             description = schema["description"]
             description = description.strip()
