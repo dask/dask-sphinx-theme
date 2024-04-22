@@ -8,7 +8,7 @@ demo
 ```
 
 This is the official Sphinx theme for Dask documentation. It extends the
-[PyData Sphinx Theme](https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html), 
+[PyData Sphinx Theme](https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html),
 but adds custom styling and a navigation bar to additional Dask subprojects.
 
 ## Installation
