@@ -1,0 +1,9 @@
+[theme]
+inherit = "pydata_sphinx_theme"
+stylesheets = ["css/style.css"]
+pygments_style = { default = "dask_sphinx_theme._pygments.style.DaskStyle" }
+
+[options]
+show_prev_next = "False"
+logo_link = "_static/images/dask-horizontal-white.svg"
+google_tag_manager_id = "GTM-P4GQM59"

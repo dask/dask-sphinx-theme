@@ -5,6 +5,7 @@ recursive-include dask_sphinx_theme *.svg
 recursive-include dask_sphinx_theme *.png
 recursive-include dask_sphinx_theme *.ico
 recursive-include dask_sphinx_theme *.conf
+recursive-include dask_sphinx_theme *.toml
 
 include setup.py
 include requirements.txt
