@@ -6,7 +6,11 @@ from docutils.parsers.rst import Directive, directives
 
 def get_remote_yaml(url):
     r = requests.get(url)
-    return yaml.safe_load(r.text)
+    try:
+        return yaml.safe_load(r.text)
+    except Exception as e:
+        print(f"Failed to load {url} with text {r.text}")
+        raise e
 
 
 class DaskConfigDirective(Directive):
