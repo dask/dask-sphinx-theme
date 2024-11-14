@@ -23,6 +23,7 @@ class DaskConfigDirective(Directive):
         schema = self.options["schema"]
         print(f"\n\n\n[file] {schema = }\n\n\n")
 
+        print("Attempting to run get_remote_yaml(config)...")
         config = get_remote_yaml(config)
         print(f"\n\n\n{config = }\n\n\n")
         schema = get_remote_yaml(schema)
