@@ -19,10 +19,14 @@ class DaskConfigDirective(Directive):
     def run(self):
         location = self.options["location"]
         config = self.options["config"]
+        print(f"\n\n\n[file] {config = }\n\n\n")
         schema = self.options["schema"]
+        print(f"\n\n\n[file] {schema = }\n\n\n")
 
         config = get_remote_yaml(config)
+        print(f"\n\n\n{config = }\n\n\n")
         schema = get_remote_yaml(schema)
+        print(f"\n\n\n{schema = }\n\n\n")
 
         for k in location.split("."):
             # dask config does not have a top level key
