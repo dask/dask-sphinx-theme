@@ -6,12 +6,12 @@ from docutils.parsers.rst import Directive, directives
 
 
 def get_remote_yaml(url):
-    r = requests.get(url, headers={'User-Agent': f'Dask sphinx theme {dask_sphinx_theme.__version__}'})
-    try:
-        return yaml.safe_load(r.text)
-    except Exception as e:
-        print(f"Failed to load {url} with text {r.text}")
-        raise e
+    r = requests.get(
+        url,
+        headers={"User-Agent": f"Dask sphinx theme {dask_sphinx_theme.__version__}"},
+    )
+    r.raise_for_status()
+    return yaml.safe_load(r.text)
 
 
 class DaskConfigDirective(Directive):
@@ -24,15 +24,10 @@ class DaskConfigDirective(Directive):
     def run(self):
         location = self.options["location"]
         config = self.options["config"]
-        print(f"\n\n\n[file] {config = }\n\n\n")
         schema = self.options["schema"]
-        print(f"\n\n\n[file] {schema = }\n\n\n")
 
-        print("Attempting to run get_remote_yaml(config)...")
         config = get_remote_yaml(config)
-        print(f"\n\n\n{config = }\n\n\n")
         schema = get_remote_yaml(schema)
-        print(f"\n\n\n{schema = }\n\n\n")
 
         for k in location.split("."):
             # dask config does not have a top level key
