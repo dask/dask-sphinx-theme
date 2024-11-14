@@ -1,3 +1,4 @@
+import dask_sphinx_theme
 import requests
 import yaml
 from docutils import nodes
@@ -5,7 +6,7 @@ from docutils.parsers.rst import Directive, directives
 
 
 def get_remote_yaml(url):
-    r = requests.get(url)
+    r = requests.get(url, headers={'User-Agent': f'Dask sphinx theme {dask_sphinx_theme.__version__}'})
     try:
         return yaml.safe_load(r.text)
     except Exception as e:
