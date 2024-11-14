@@ -88,7 +88,7 @@ def dask_config_to_html(key, value, schema, prefix=""):
                     <dd><p>{description}</p></dd>
                     </dl>
 
-                """
+                """  # noqa
         return [node]
 
 
