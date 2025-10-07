@@ -1,0 +1,28 @@
+[project]
+name = "dask_sphinx_theme"
+version = "3.0.5"
+description = "Dask theme for Sphinx"
+readme = "README.rst"
+authors = [{ name = "Dask Developers" }]
+dependencies = ["jsonschema", "sphinx-book-theme==0.2.0"]
+license = { text = "BSD" }
+requires-python = ">=3.11"
+
+[project.urls]
+Homepage = "https://github.com/dask/dask-sphinx-theme/"
+
+[project.entry-points."sphinx.html_themes"]
+dask_sphinx_theme = "dask_sphinx_theme"
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.targets.wheel]
+packages = ["dask_sphinx_theme"]
+
+[tool.hatch.build.hooks.vcs]
+version-file = "dask_sphinx_theme/_version.py"
