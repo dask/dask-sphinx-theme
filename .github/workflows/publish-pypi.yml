@@ -13,10 +13,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Set up Python 3.7
-        uses: actions/setup-python@v1
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v6
         with:
-          python-version: 3.7
+          python-version: 3.12
 
       - name: Install dask-sphinx-theme
         run: |
@@ -29,7 +29,7 @@ jobs:
           python setup.py sdist bdist_wheel
 
       - name: Publish dask-sphinx-theme
-        uses: pypa/gh-action-pypi-publish@master
+        uses: pypa/gh-action-pypi-publish@v1.13.0
         with:
           user: __token__
           password: ${{ secrets.pypi_token }}
