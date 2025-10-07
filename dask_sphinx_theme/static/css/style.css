@@ -1,4 +1,4 @@
-@import "../sphinx-book-theme.css";
+@import "../styles/sphinx-book-theme.css";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700");
 
@@ -37,7 +37,7 @@ code {
 }
 
 body {
-  padding-top: calc(var(--pst-header-height) + 20px);
+  padding-top: calc(var(--pst-header-height));
   background-color: #fff;
   font-family: var(--pst-font-family-base);
   font-weight: 400;
@@ -67,6 +67,7 @@ body {
 }
 
 @media (min-width: 1600px) {
+
   .container,
   .container-lg,
   .container-md,
@@ -82,6 +83,10 @@ body {
 
 .prev-next-bottom {
   display: none;
+}
+
+button.theme-switch-button {
+  display: none !important;
 }
 
 /* reference links */
@@ -104,6 +109,10 @@ see github.com/dask/dask-sphinx-theme/issues/74 */
 }
 
 /* navigation pane - left sidebar */
+
+.navbar-brand {
+  display: none;
+}
 
 #site-navigation {
   background: var(--light-grey);
@@ -131,7 +140,7 @@ see github.com/dask/dask-sphinx-theme/issues/74 */
     border-left: 2px solid var(--yellow)
 } */
 
-#site-navigation nav ul.nav li.active > a {
+#site-navigation nav ul.nav li.active>a {
   border-left: 2px solid var(--yellow);
 }
 
@@ -152,13 +161,18 @@ see github.com/dask/dask-sphinx-theme/issues/74 */
   margin-bottom: 0;
 }
 
+footer .footer-item {
+  float: left;
+  margin-right: 1rem;
+}
+
 /* table on contents (right sidebar) */
 .bd-toc .toc-entry a {
   color: var(--black);
   text-decoration: none;
 }
 
-.bd-toc nav li.active > a.active {
+.bd-toc nav li.active>a.active {
   font-family: var(--pst-font-family-base);
   font-weight: 700;
   border-left: 2px solid var(--yellow);
@@ -178,6 +192,10 @@ div.navbar-brand-box {
   padding-top: 0;
 }
 
+main {
+  background-color: var(--bs-body-bg)
+}
+
 main.bd-content {
   padding-top: 6em !important;
 }
@@ -186,11 +204,12 @@ main.bd-content {
 
 .dask-nav {
   background-color: var(--black);
-  height: 4em;
+  height: var(--pst-header-height);
   display: block;
   position: fixed;
   right: 0;
   left: 0;
+  top: 0;
   z-index: 2100;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -204,7 +223,7 @@ main.bd-content {
   white-space: nowrap;
 }
 
-.dask-nav ul > li {
+.dask-nav ul>li {
   display: inline-block;
   position: relative;
   transition: 0.3s;
@@ -212,11 +231,12 @@ main.bd-content {
   padding: 0.5em 2rem 0.5em 2rem;
 }
 
-.dask-nav ul > li > a {
+.dask-nav ul>li>a {
   color: white;
+  text-decoration: none;
 }
 
-.dask-nav ul > li > a:hover {
+.dask-nav ul>li>a:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: var(--yellow);
@@ -251,13 +271,11 @@ ul.navbar-nav li.nav-item:hover {
   transition: var(--transition);
 }
 
-ul.current.nav.bd-sidenav
-  li.toctree-l1.current.active
-  a.current.reference.internal {
+ul.current.nav.bd-sidenav li.toctree-l1.current.active a.current.reference.internal {
   font-weight: inherit;
 }
 
-.toc-entry > .nav-link.active {
+.toc-entry>.nav-link.active {
   font-family: var(--pst-font-family-base);
   font-weight: inherit;
 }
@@ -270,17 +288,3 @@ ul.current.nav.bd-sidenav
 .classifier::before {
   content: ": ";
 }
-
-/* icons */
-
-/* .fa-download:before {
-    content: url('../images/icon-download.svg');
-}
-
-.fa-expand:before {
-    content: url('../images/icon-expand.svg');
-}
-
-.fa-bars:before {
-    content: url('../images/icon-menu.svg');
-} */

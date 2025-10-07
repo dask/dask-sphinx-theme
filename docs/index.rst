@@ -1,10 +1,6 @@
 Welcome to Dask Sphinx Theme's documentation!
 =============================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
 This is the official Sphinx theme for Dask documentation.  It extends the
 ``sphinx_rtd_theme`` project, but adds custom styling and a navigation bar to
 additional Dask subprojects.
@@ -18,3 +14,11 @@ line in your conf.py file
 
 And by including ``dask_sphinx_theme`` as a requirement in your documentation
 installation.
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+
+   self
+   10-minutes-to-dask

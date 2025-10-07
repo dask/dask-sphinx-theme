@@ -4,7 +4,19 @@ version = "3.0.5"
 description = "Dask theme for Sphinx"
 readme = "README.rst"
 authors = [{ name = "Dask Developers" }]
-dependencies = ["jsonschema", "sphinx-book-theme==0.2.0"]
+dependencies = [
+    "sphinx>=7.0",
+    "pyyaml",
+    "numpydoc",
+    "jsonschema",
+    "sphinx-book-theme>=1,<2",
+    "sphinx-click",
+    "sphinx-copybutton",
+    "sphinx-remove-toctrees",
+    "sphinx_autosummary_accessors",
+    "sphinx-tabs",
+    "sphinx-design",
+]
 license = { text = "BSD" }
 requires-python = ">=3.11"
 
@@ -26,3 +38,6 @@ packages = ["dask_sphinx_theme"]
 
 [tool.hatch.build.hooks.vcs]
 version-file = "dask_sphinx_theme/_version.py"
+
+[dependency-groups]
+dev = ["sphinx-autobuild>=2025.8.25"]
