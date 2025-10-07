@@ -60,3 +60,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # a list of builtin themes.
 #
 html_theme = "dask_sphinx_theme"
+
+intersphinx_mapping = {
+    "dask": ("https://docs.dask.org/en/latest", None),
+}

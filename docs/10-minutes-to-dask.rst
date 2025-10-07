@@ -42,7 +42,7 @@ including information about how the chunks should be structured.
    .. tab-item:: DataFrame
       :sync: dataframe
 
-      See :doc:`dataframe`.
+      See :external+dask:doc:`dataframe`.
 
       .. code-block:: python
 
@@ -93,7 +93,7 @@ including information about how the chunks should be structured.
    .. tab-item:: Array
       :sync: array
 
-      See :doc:`array`.
+      See :external+dask:doc:`array`.
 
       .. code-block:: python
 
@@ -122,7 +122,7 @@ including information about how the chunks should be structured.
    .. tab-item:: Bag
       :sync: bag
 
-      See :doc:`bag`.
+      See :external+dask:doc:`bag`.
 
       .. code-block:: python
 
@@ -455,7 +455,7 @@ run into code that is parallelizable, but isn't just a big DataFrame or array.
 
    .. tab-item:: Delayed: Lazy
 
-      :doc:`delayed` lets you to wrap individual function calls into a lazily constructed task graph:
+      :external+dask:doc:`delayed` lets you to wrap individual function calls into a lazily constructed task graph:
 
       .. code-block:: python
 
@@ -478,7 +478,7 @@ run into code that is parallelizable, but isn't just a big DataFrame or array.
    .. tab-item:: Futures: Immediate
 
       Unlike the interfaces described so far, Futures are eager. Computation starts as soon
-      as the function is submitted (see :doc:`futures`).
+      as the function is submitted (see :external+dask:doc:`futures`).
 
       .. code-block:: python
 
@@ -508,12 +508,12 @@ Scheduling
 ----------
 
 After you have generated a task graph, it is the scheduler's job to execute it
-(see :doc:`scheduling`).
+(see :external+dask:doc:`scheduling`).
 
 By default, for the majority of Dask APIs, when you call ``compute`` on a Dask object, 
 Dask uses the thread pool on your computer (a.k.a threaded scheduler) to run computations in parallel.
-This is true for :doc:`Dask Array <array>`, :doc:`Dask DataFrame <dataframe>`, 
-and :doc:`Dask Delayed <delayed>`. The exception being :doc:`Dask Bag <bag>`
+This is true for :external+dask:doc:`Dask Array <array>`, :external+dask:doc:`Dask DataFrame <dataframe>`, 
+and :external+dask:doc:`Dask Delayed <delayed>`. The exception being :external+dask:doc:`Dask Bag <bag>`
 which uses the multiprocessing scheduler by default.
 
 If you want more control, use the distributed scheduler instead. Despite having
@@ -547,7 +547,7 @@ on both single and multiple machines. Think of it as the "advanced scheduler".
          <Client: 'tcp://127.0.0.1:41703' processes=4 threads=12, memory=31.08 GiB>
 
       There are a variety of ways to set up a remote cluster. Refer to
-      :doc:`how to deploy dask clusters <deploying>` for more
+      :external+dask:doc:`how to deploy dask clusters <deploying>` for more
       information.
 
 Once you create a client, any computation will run on the cluster that it points to.
@@ -564,4 +564,4 @@ see your tasks as they are processed.
    >>> client.dashboard_link
    'http://127.0.0.1:8787/status'
 
-To learn more about those graphs take a look at :doc:`dashboard`.
+To learn more about those graphs take a look at :external+dask:doc:`dashboard`.
