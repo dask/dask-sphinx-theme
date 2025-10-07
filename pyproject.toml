@@ -1,9 +1,9 @@
 [project]
 name = "dask_sphinx_theme"
-version = "3.0.5"
 description = "Dask theme for Sphinx"
 readme = "README.rst"
 authors = [{ name = "Dask Developers" }]
+dynamic = ["version"]
 dependencies = [
     "sphinx>=7.0",
     "pyyaml",
