@@ -67,7 +67,6 @@ body {
 }
 
 @media (min-width: 1600px) {
-
   .container,
   .container-lg,
   .container-md,
@@ -140,7 +139,7 @@ see github.com/dask/dask-sphinx-theme/issues/74 */
     border-left: 2px solid var(--yellow)
 } */
 
-#site-navigation nav ul.nav li.active>a {
+#site-navigation nav ul.nav li.active > a {
   border-left: 2px solid var(--yellow);
 }
 
@@ -172,7 +171,7 @@ footer .footer-item {
   text-decoration: none;
 }
 
-.bd-toc nav li.active>a.active {
+.bd-toc nav li.active > a.active {
   font-family: var(--pst-font-family-base);
   font-weight: 700;
   border-left: 2px solid var(--yellow);
@@ -193,7 +192,7 @@ div.navbar-brand-box {
 }
 
 main {
-  background-color: var(--bs-body-bg)
+  background-color: var(--bs-body-bg);
 }
 
 main.bd-content {
@@ -224,7 +223,7 @@ main.bd-content {
   text-align: center;
 }
 
-.dask-nav ul>li {
+.dask-nav ul > li {
   display: inline-block;
   position: relative;
   transition: 0.3s;
@@ -232,12 +231,12 @@ main.bd-content {
   padding: 0.5em 2rem 0.5em 2rem;
 }
 
-.dask-nav ul>li>a {
+.dask-nav ul > li > a {
   color: white;
   text-decoration: none;
 }
 
-.dask-nav ul>li>a:hover {
+.dask-nav ul > li > a:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: var(--yellow);
@@ -272,11 +271,13 @@ ul.navbar-nav li.nav-item:hover {
   transition: var(--transition);
 }
 
-ul.current.nav.bd-sidenav li.toctree-l1.current.active a.current.reference.internal {
+ul.current.nav.bd-sidenav
+  li.toctree-l1.current.active
+  a.current.reference.internal {
   font-weight: inherit;
 }
 
-.toc-entry>.nav-link.active {
+.toc-entry > .nav-link.active {
   font-family: var(--pst-font-family-base);
   font-weight: inherit;
 }

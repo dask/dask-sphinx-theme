@@ -1,17 +1,24 @@
-{%- set favicon_url = favicon_url or ('_static/' + ('images/favicon.svg')) %}
-{% extends "sphinx_book_theme/layout.html" %}
-
-{%- block content %}
+{%- set favicon_url = favicon_url or ('_static/' + ('images/favicon.svg')) %} {%
+extends "sphinx_book_theme/layout.html" %} {%- block content %}
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ theme_google_tag_manager_id }}" height="0"
-    width="0" style="display: none; visibility: hidden"></iframe></noscript>
+<noscript
+  ><iframe
+    src="https://www.googletagmanager.com/ns.html?id={{ theme_google_tag_manager_id }}"
+    height="0"
+    width="0"
+    style="display: none; visibility: hidden"
+  ></iframe
+></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <nav class="dask-nav container-fluid">
   <ul>
     <li class="logo">
       <a href="https://docs.dask.org/">
-        <img class="caption" src="{{ pathto('_static/images/dask-horizontal-white.svg', 1) }}" />
+        <img
+          class="caption"
+          src="{{ pathto('_static/images/dask-horizontal-white.svg', 1) }}"
+        />
       </a>
     </li>
 
@@ -41,11 +48,7 @@
   </ul>
 </nav>
 
-{{ super() }}
-
-{%- endblock %}
-
-{% block footer %}
+{{ super() }} {%- endblock %} {% block footer %}
 <!-- Google Tag Manager -->
 <script>
   (function (w, d, s, l, i) {
@@ -70,6 +73,4 @@
 </script>
 <!-- End Google Tag Manager -->
 
-{{ super() }}
-
-{%- endblock %}
+{{ super() }} {%- endblock %}
