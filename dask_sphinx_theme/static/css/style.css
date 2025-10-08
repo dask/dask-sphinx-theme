@@ -37,23 +37,24 @@ code {
 }
 
 body {
+  background-image: url("../images/background-grid.svg");
+  background-repeat: repeat;
   padding-top: calc(var(--pst-header-height));
-  background-color: #fff;
+  background-color: var(--pst-color-background);
   font-family: var(--pst-font-family-base);
   font-weight: 400;
   line-height: 1.65;
-  color: var(--black);
+  color: var(--sd-color-primary-bg-text);
+}
+
+main {
+  background-color: var(--pst-color-background);
 }
 
 *,
 :after,
 :before {
   box-sizing: border-box;
-}
-
-body {
-  background-image: url("../images/background-grid.svg");
-  background-repeat: repeat;
 }
 
 .container,
@@ -63,7 +64,7 @@ body {
 .container-xl {
   max-width: 1600px;
   margin-left: inherit;
-  background-color: white;
+  background-color: var(--pst-color-background);
 }
 
 @media (min-width: 1600px) {
@@ -82,10 +83,6 @@ body {
 
 .prev-next-bottom {
   display: none;
-}
-
-button.theme-switch-button {
-  display: none !important;
 }
 
 /* reference links */
@@ -121,18 +118,18 @@ see github.com/dask/dask-sphinx-theme/issues/74 */
 
 #site-navigation nav ul.nav li a {
   padding-left: 2%;
-  color: var(--black);
+  color: var(--sd-color-primary-bg-text);
   text-decoration: none;
 }
 
 #site-navigation nav ul.nav ul li a {
-  color: var(--black);
+  color: var(--sd-color-primary-bg-text);
 }
 
 #site-navigation nav ul.nav a:hover {
-  color: var(--black);
+  color: var(--sd-color-primary-bg-text);
   font-weight: 700;
-  border-left: 2px solid var(--black);
+  border-left: 2px solid var(--sd-color-primary-bg-text);
 }
 
 /* #site-navigation nav ul.nav li a:active {
@@ -151,11 +148,11 @@ see github.com/dask/dask-sphinx-theme/issues/74 */
   position: relative;
   margin-top: 1.25em;
   margin-bottom: 0.5em;
-  color: var(--black);
+  color: var(--sd-color-primary-bg-text);
 }
 
 #site-navigation div.navbar_extra_footer {
-  color: var(--black);
+  color: vvar(--sd-color-primary-bg-text);
   padding-bottom: 3em;
   margin-bottom: 0;
 }
@@ -167,7 +164,7 @@ footer .footer-item {
 
 /* table on contents (right sidebar) */
 .bd-toc .toc-entry a {
-  color: var(--black);
+  color: var(--sd-color-primary-bg-text);
   text-decoration: none;
 }
 
@@ -189,10 +186,6 @@ footer .footer-item {
 
 div.navbar-brand-box {
   padding-top: 0;
-}
-
-main {
-  background-color: var(--bs-body-bg);
 }
 
 main.bd-content {
