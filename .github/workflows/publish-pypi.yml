@@ -1,6 +1,9 @@
 name: Push to PyPI
 
 on:
+  # TODO: Revert
+  pull_request:
+    branches: main
   push:
     tags:
       - "*"
@@ -22,9 +25,11 @@ jobs:
         run: |
           python -m pip install build
           pyproject-build
+          ls .
 
-      - name: Publish dask-sphinx-theme
-        uses: pypa/gh-action-pypi-publish@v1.13.0
-        with:
-          user: __token__
-          password: ${{ secrets.pypi_token }}
+      # TODO: Revert
+      # - name: Publish dask-sphinx-theme
+      #   uses: pypa/gh-action-pypi-publish@v1.13.0
+      #   with:
+      #     user: __token__
+      #     password: ${{ secrets.pypi_token }}
