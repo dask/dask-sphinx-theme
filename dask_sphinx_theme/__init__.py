@@ -1,7 +1,5 @@
 from os import path
-from . import _version
-
-__version__ = _version.get_versions()["version"]
+from ._version import __version__
 
 
 def get_html_theme_path():
