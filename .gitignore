@@ -2,3 +2,4 @@ __pycache__
 docs/_build
 **/*.egg-info
 _version.py
+uv.lock
